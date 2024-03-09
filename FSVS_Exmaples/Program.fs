@@ -5,7 +5,7 @@ open System
 [<EntryPoint>]
 let main argv =
     printfn "\n  Hello from F#"
-    printfn "  Running Week 6 Slides"
+    printfn "  Running Bank Account"
     printfn " "
 
     // Week02.exercise01.run()
@@ -35,7 +35,8 @@ let main argv =
     //Slides5.exercise01.run()
     //Slides5.exercise02.run()
     
-    Slides5.exercise03.run()
+    //Slides5.exercise03.run()
+    Bank.Accounts.run()
 
     0
 
