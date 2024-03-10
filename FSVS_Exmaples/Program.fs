@@ -37,6 +37,7 @@ let main argv =
     
     //Slides5.exercise03.run()
     Bank.Accounts.run()
+    Week07.patterns.run()
 
     0
 
