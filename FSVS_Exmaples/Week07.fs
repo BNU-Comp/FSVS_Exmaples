@@ -103,11 +103,16 @@ module Students =
             Student("Charlie", "C345", 'C')
             Student("David", "D456", 'D')
             Student("Eve", "E567", 'F')
-            Student("Frank", "F678", 'F')
+            Student("Francis", "F678", 'F')
         ]
 
-        printfn "\n\n  List of Students\n"
+        printfn "\n\n  List of Students using simple loop\n"
         for student in students do
             student.Print()
 
+        // Print the list of students using the iter function
+        printfn "\n\n  List of Students using List iter function\n"
+        List.iter (fun (student: Student) -> student.Print()) students
+
+        
         0
