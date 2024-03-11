@@ -41,6 +41,6 @@ let main argv =
     Week07.patterns.run()
     Week07.Records.run()
     Week07.Classes.run()
-
+    Week07.Students.run()
     0
 
