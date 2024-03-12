@@ -3,15 +3,15 @@ module Week07
 open System
 
 module patterns =
-    let run() =
-        let feedback grade =
-            match  grade with
-            | 'A' -> "Excellent"
-            | 'B' -> "Very good"
-            | 'C' -> "Good"
-            | 'D' -> "Pass"
-            | _ -> "Fail"
+    let feedback grade =
+        match  grade with
+        | 'A' -> "Excellent"
+        | 'B' -> "Very good"
+        | 'C' -> "Good"
+        | 'D' -> "Pass"
+        | _ -> "Fail"
 
+    let run() =
         Console.Write("  Your grade is ")
         Console.WriteLine(feedback 'B')
         Console.WriteLine("  ")
@@ -110,7 +110,7 @@ module Students =
         printfn "\n\n  List of Students using simple loop\n"
         for student in students do
             student.Print()
-
+            patterns.feedback student.Grade |> printfn "  Feedback: %s"
         // Print the list of students using the List iter function
         printfn "\n\n  List of Students using List iter function\n"
         List.iter (fun (student: Student) -> student.Print()) students
