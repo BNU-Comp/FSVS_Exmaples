@@ -111,9 +111,18 @@ module Students =
         for student in students do
             student.Print()
             patterns.feedback student.Grade |> printfn "  Feedback: %s"
+        
         // Print the list of students using the List iter function
         printfn "\n\n  List of Students using List iter function\n"
         List.iter (fun (student: Student) -> student.Print()) students
-
         
+        let passStudents = List.filter (fun (student: Student) -> student.Grade <> 'F') students
+        let referStudents = List.filter (fun (student: Student) -> student.Grade = 'F') students
+        
+        printfn "\n  Passed Students"
+        passStudents |> List.iter (fun (student: Student) -> student.Print())
+
+        printfn "\n  Referred Students"
+        referStudents |> List.iter (fun (student: Student) -> student.Print())
+
         0
