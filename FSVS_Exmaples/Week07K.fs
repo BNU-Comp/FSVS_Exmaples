@@ -54,3 +54,50 @@ the Email address*)
         
         kate.Print()
         0
+
+module Students =
+    (* Def a function that will pattern match a Student Grade with a phrase such
+    Excellent or for grade A*)
+    let GradePhrase grade =
+        match grade with
+        | 'A' -> "Excellent"
+        | 'B' -> "Very Good"
+        | 'C' -> "Good"
+        | 'D' -> "Pass"
+        | 'E' -> "Fail"
+        | 'F' -> "Refer"
+        | _ -> "Invalid Grade"
+
+    (*Define a record type called Student which has a name of type string, 
+    an Id of type string and a mutable grade of type char.The record should also have a method for
+    printing the Student details*)
+    type Student = 
+        {
+            Name: string
+            Id: string
+            mutable Grade: char
+        }
+        member this.Print =
+            Console.WriteLine($" Student: {this.Name}")
+            Console.WriteLine($" Id: {this.Id}")
+            Console.WriteLine($" Grade: {this.Grade}")
+            Console.WriteLine($" Grade Phrase: {GradePhrase this.Grade}")
+            Console.WriteLine(" ")
+        member this.UpdateGrade newGrade =
+            {this with Grade = newGrade}
+       let run() =
+       // Create a list of six Students
+           let students = [
+                {Name="Kate"; Id="001"; Grade='A'}
+                {Name="Bob"; Id="002"; Grade='B'}
+                {Name="James"; Id="003"; Grade='C'}
+                {Name="Mary"; Id="004"; Grade='D'}
+                {Name="John"; Id="005"; Grade='E'}
+                {Name="Jane"; Id="006"; Grade='F'}
+           ]
+           // Print the details of each student
+           for student in students do
+                student.Print
+           0
+
+     

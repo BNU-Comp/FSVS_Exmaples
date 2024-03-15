@@ -40,6 +40,7 @@ let main argv =
 
     Week07K.Customer.run()
     Week07K.Classes.run()
+    Week07K.Students.run()
 
     0
 
