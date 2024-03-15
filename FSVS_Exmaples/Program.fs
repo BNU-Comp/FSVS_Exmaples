@@ -39,6 +39,7 @@ let main argv =
     //Bank.Accounts.run()
 
     Week07K.Customer.run()
+    Week07K.Classes.run()
 
     0
 
