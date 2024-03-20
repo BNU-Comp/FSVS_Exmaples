@@ -1,7 +1,8 @@
 module Week07
 
 open System
-
+///
+/// Week 07 - Pattern matching, Classes, Records and Lists
 module patterns =
     let feedback grade =
         match  grade with
