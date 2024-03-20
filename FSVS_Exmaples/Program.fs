@@ -42,5 +42,9 @@ let main argv =
     Week07K.Classes.run()
     Week07K.Students.run()
 
+    Bank2.Accounts.run()
+
+   
+
     0
 

@@ -77,6 +77,10 @@ module Students =
             Id: string
             mutable Grade: char
         }
+        //Best practice is to define any methods inside the type definition
+        //Alternative way is to link the method to the type using the member keyword which is shown below
+        //Third possibility is that you can define the method outside the type definition but they must the type definition
+        //A final way to achieve this is to define the type as a class type not a record type. This would gain maximum mark
         member this.Print =
             Console.WriteLine($" Student: {this.Name}")
             Console.WriteLine($" Id: {this.Id}")
@@ -95,6 +99,7 @@ module Students =
                 {Name="John"; Id="005"; Grade='E'}
                 {Name="Jane"; Id="006"; Grade='F'}
            ]
+
            // Print the details of each student
            for student in students do
                 student.Print
@@ -111,5 +116,4 @@ module Students =
            printfn "\n  Referred Students"
            referStudents |> List.iter (fun (student: Student) -> student.Print)
            0
-
      

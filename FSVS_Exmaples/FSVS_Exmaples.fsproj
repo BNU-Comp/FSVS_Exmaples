@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Bank2.fs" />
     <Compile Include="Week07K.fs" />
     <Compile Include="Bank.fs" />
     <Compile Include="Helpers.fs" />
