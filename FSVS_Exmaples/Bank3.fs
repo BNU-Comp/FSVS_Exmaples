@@ -8,6 +8,7 @@ open System
   decrease the balance by marking a Withdrawal providing there is enough 
   in the account.
 *)
+
 type Account(accountNo: string, balance: float) =
     let mutable accountNo = accountNo
     let mutable balance = balance
@@ -24,7 +25,8 @@ type Account(accountNo: string, balance: float) =
         else
             printfn "  Insufficient funds to withdraw %.2f" amount
 
-    member this.run() =
+module TestAccount =
+    let run() =
         printfn "\n\n  Bank Account Class\n"
         let account = Account("123456", 1000.00)
         account.printAccount()

@@ -44,6 +44,7 @@ let main argv =
     //Week07.Students.run()
     
     Bank2.BankAccount.run()
-    Bank3.Account.run()
+    Bank3.TestAccount.run()
+
     0
 
