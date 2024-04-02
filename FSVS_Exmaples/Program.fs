@@ -38,11 +38,11 @@ let main argv =
     //Slides5.exercise03.run()
     //Bank.Accounts.run()
 
-    Week07K.Customer.run()
-    Week07K.Classes.run()
-    Week07K.Students.run()
+    //Week07K.Customer.run()
+    //Week07K.Classes.run()
+    //Week07K.Students.run()
 
-    Bank2.Accounts.run()
+    Bank2.TestAccounts.run()
 
    
 

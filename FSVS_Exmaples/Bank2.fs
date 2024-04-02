@@ -23,3 +23,67 @@ type Account =
     member this.Print = 
         printfn "Account Number: %s, Balance: %0.2f" this.AccountNumber this.Balance
 
+(*Define a function named CheckAccount that implements pattern matching
+to display balance is low if the balance is <10.0 and displays balance is 
+OK if the balance is >= 10.0 and <= 100.0*)
+let CheckAccount account =
+    match account.Balance with
+    | x when x < 10.0 -> printfn "Balance is low"
+    | x when x >= 10.0 && x <= 100.0 -> printfn "Balance is OK"
+    | _ -> printfn "Balance is high"
+
+        
+        (*Create three bank accounts and make some withdrawls and deposits to test 
+        the account type and print all the results out*)
+module TestAccounts =
+        let run() =
+            let account1 = {AccountNumber = "0001"; Balance = 0.0}
+            let account2 = {AccountNumber = "0002"; Balance = 5.0}
+            let account3 = {AccountNumber = "0003"; Balance = 51.0}
+            let account4 = {AccountNumber = "0004"; Balance = 25.0}
+            let account5 = {AccountNumber = "0004"; Balance = 99.0}
+            let account6 = {AccountNumber = "0006"; Balance = 101.0}
+
+            account1.Withdraw 50.0
+            account1.Deposit 25.0
+            account1.Print
+            CheckAccount account1
+            printfn " "
+            
+            account2.Deposit 100.0
+            account2.Withdraw 50.0
+            account2.Print
+            CheckAccount account2
+            printfn " "
+
+            account3.Deposit 1000.0
+            account3.Withdraw 1000.0
+            account3.Print
+            CheckAccount account3
+            printfn " "
+
+            account4.Deposit 150.0
+            account4.Withdraw 75.0
+            account4.Print
+            CheckAccount account4
+            printfn " "
+
+            account5.Deposit 300.52
+            account5.Withdraw 10.52
+            account5.Print
+            CheckAccount account5
+            printfn " "
+
+            account6.Deposit 1000000.0
+            account6.Withdraw -500.0
+            account6.Print
+            CheckAccount account6
+            printfn " "
+
+ (**)
+            0
+            
+        
+
+        
+
