@@ -22,7 +22,7 @@ type Account =
             this.Balance <- this.Balance - amount
     member this.Print = 
         printfn "Account Number: %s, Balance: %0.2f" this.AccountNumber this.Balance
-
+//Task 2
 (*Define a function named CheckAccount that implements pattern matching
 to display balance is low if the balance is <10.0 and displays balance is 
 OK if the balance is >= 10.0 and <= 100.0*)
@@ -80,7 +80,37 @@ module TestAccounts =
             CheckAccount account6
             printfn " "
 
- (**)
+ (**)       
+            let Accounts = [account1; account2; account3; account4; account5; account6]
+            // create a list of six new accounts with vaues
+            //let Accounts = [{AccountNumber = "0001"; Balance = 0.0};{AccountNumber = "0001"; Balance = 0.0}]
+            
+            printfn "list of six Accounts "
+
+            for account in Accounts do
+                account.Print
+                CheckAccount account
+                printfn " "
+            // Create a new list of all the accounts where the balalance is < 50.0
+            let LowBalanceAccounts = 
+                List.filter (fun account -> account.Balance < 50.0) Accounts
+            printfn "list of LowBalanceAccounts "
+
+            for account in LowBalanceAccounts do
+                account.Print
+                CheckAccount account
+                printfn " "
+           
+           // Create a new list of all the accounts where the balalance is >= 50.0
+            let HighBalanceAccounts = 
+                List.filter (fun account -> account.Balance >= 50.0) Accounts
+            printfn "list of HighBalanceAccounts "
+
+            for account in HighBalanceAccounts do
+                account.Print
+                CheckAccount account
+                printfn " "
+
             0
             
         
