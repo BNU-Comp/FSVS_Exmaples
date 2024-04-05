@@ -93,8 +93,8 @@ module TestAccounts =
                 printfn " "
             // Create a new list of all the accounts where the balalance is < 50.0
             let LowBalanceAccounts = 
-                List.filter (fun account -> account.Balance < 50.0) Accounts
-            printfn "list of LowBalanceAccounts "
+                Seq.filter (fun account -> account.Balance < 50.0) Accounts
+            printfn "Sequence of Low Balance Accounts "
 
             for account in LowBalanceAccounts do
                 account.Print
@@ -103,8 +103,8 @@ module TestAccounts =
            
            // Create a new list of all the accounts where the balalance is >= 50.0
             let HighBalanceAccounts = 
-                List.filter (fun account -> account.Balance >= 50.0) Accounts
-            printfn "list of HighBalanceAccounts "
+                Seq.filter (fun account -> account.Balance >= 50.0) Accounts
+            printfn "Sequence of High Balance Accounts "
 
             for account in HighBalanceAccounts do
                 account.Print
