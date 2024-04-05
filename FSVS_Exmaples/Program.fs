@@ -4,8 +4,8 @@ open System
 
 [<EntryPoint>]
 let main argv =
-    printfn "\n  Hello from F#"
-    printfn "  Running Bank Account"
+    printfn "\n CW1 CO561 Kate Ibom "
+    printfn " Theatre Tickets "
     printfn " "
 
     // Week02.exercise01.run()
@@ -42,7 +42,8 @@ let main argv =
     //Week07K.Classes.run()
     //Week07K.Students.run()
 
-    Bank2.TestAccounts.run()
+    //Bank2.TestAccounts.run()
+    Seatbooking.TestTickets.run()
 
    
 

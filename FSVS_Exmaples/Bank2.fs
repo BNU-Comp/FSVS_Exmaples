@@ -80,7 +80,7 @@ module TestAccounts =
             CheckAccount account6
             printfn " "
 
- (**)       
+ (**)       //task 3
             let Accounts = [account1; account2; account3; account4; account5; account6]
             // create a list of six new accounts with vaues
             //let Accounts = [{AccountNumber = "0001"; Balance = 0.0};{AccountNumber = "0001"; Balance = 0.0}]
