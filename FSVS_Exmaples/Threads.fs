@@ -6,6 +6,7 @@ open System.Threading
 let run() =
 
     let mutable available = true
+    let lockobj = new Object()// object used to lock the critical section
   // Define a function to be executed by each thread
     let taskFunction (name: string) =
             for i = 1 to 5 do
