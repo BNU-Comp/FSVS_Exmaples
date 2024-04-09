@@ -98,7 +98,8 @@ module TestTickets =
         for ticket in tickets do
             ticket.Print
         printfn ""
-    
+     //create two function that invokes BookSeat and implement locking within BookSeat to avoid a race race condition
+        
 
         0
 

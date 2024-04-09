@@ -6,10 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Threads.fs" />
     <Compile Include="Seatbooking.fs" />
     <Compile Include="Bank2.fs" />
     <Compile Include="Week07K.fs" />
     <Compile Include="Bank.fs" />
+    <Compile Include="Thread2.fs" />
     <Compile Include="Helpers.fs" />
     <Compile Include="Slides5.fs" />
     <Compile Include="week01.fs" />

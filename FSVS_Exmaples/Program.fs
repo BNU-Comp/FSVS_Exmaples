@@ -43,7 +43,8 @@ let main argv =
     //Week07K.Students.run()
 
     //Bank2.TestAccounts.run()
-    Seatbooking.TestTickets.run()
+    //Seatbooking.TestTickets.run()
+    Threads.run()
 
    
 
