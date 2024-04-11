@@ -12,11 +12,14 @@ let run() =
             for i = 1 to 5 do
                 
                 printfn "%s: %d" name i
-                if available then
-                    available <- false
-                    printfn "%s Booked " name
-                else
-                    printfn " Is available"
+                lock lockobj (fun () -> // lock the critical section
+                    if available then
+                        available <- false
+                        printfn "%s Booked " name
+                    else
+                        printfn " Is available"
+                )
+                
                 Thread.Sleep(1000) // Simulate some work being done
     // Create and start the first thread
     let thread1 = new Thread(fun () -> taskFunction "Thread 1")
