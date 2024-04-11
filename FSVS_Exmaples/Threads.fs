@@ -10,14 +10,16 @@ let run() =
   // Define a function to be executed by each thread
     let taskFunction (name: string) =
             for i = 1 to 5 do
+                let taskFunction (name: string) =
+                    for i = 1 to 5 do
                 
-                printfn "%s: %d" name i
-                lock lockobj (fun () -> // lock the critical section
-                    if available then
-                        available <- false
-                        printfn "%s Booked " name
-                    else
-                        printfn " Is available"
+                        printfn "%s: %d" name i
+                        lock lockobj (fun () -> // lock the critical section
+                            if available then
+                                available <- false
+                                printfn "%s Booked " name
+                            else
+                                printfn " Is not available"
                 )
                 
                 Thread.Sleep(1000) // Simulate some work being done
