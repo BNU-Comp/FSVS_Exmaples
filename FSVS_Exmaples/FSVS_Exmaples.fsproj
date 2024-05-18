@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Ethan.fs" />
+    <Content Include="StudentScores.txt" />
+    <Compile Include="Bank4.fs" />
     <Compile Include="Bank3.fs" />
     <Compile Include="Bank2.fs" />
     <Compile Include="Collections.fs" />
